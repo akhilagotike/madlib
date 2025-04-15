@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mad Lib Fun - Lab 7</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Mad Lib Generator </h1>
+  <form method="POST" action="/">
+    <label for="noun">Enter a noun:</label>
+    <input type="text" name="noun" id="noun" required>
+
+    <label for="verb">Enter a verb:</label>
+    <input type="text" name="verb" id="verb" required>
+
+    <label for="adjective">Enter an adjective:</label>
+    <input type="text" name="adjective" id="adjective" required>
+
+    <label for="place">Enter a place:</label>
+    <input type="text" name="place" id="place" required>
+
+    <label for="pluralNoun">Enter a plural noun:</label>
+    <input type="text" name="pluralNoun" id="pluralNoun" required>
+
+    <label for="name">Enter a name:</label>
+    <input type="text" name="name" id="name" required>
+
+    <button type="submit">Create My Story</button>
+  </form>
+
+  <section id="addendum">
+    <h2>Addendum</h2>
+    <p>This lab demonstrates how a backend server (Express.js) can dynamically handle user-submitted data via a POST request and generate a custom response. I used string interpolation to insert the user’s inputs into a story format and returned it directly to the browser. This reinforces how server-side logic can shape user experiences by responding uniquely to each input.</p>
+  </section>
+
+  <footer>
+    <p>Last updated: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
